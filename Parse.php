@@ -1,10 +1,19 @@
-<!-- <?php
+<?php
+/**
+*
+* @Name : OmitKeepLines/Parse.php
+* @Version : 1.0
+* @Programmer : Max
+* @Date : 2019-05-17
+* @Released under : https://github.com/BaseMax/OmitKeepLines/blob/master/LICENSE
+* @Repository : https://github.com/BaseMax/OmitKeepLines
+*
+**/
 if(isset($_POST['submit'])) {
 	$input=$_POST['input'];
 }
 else {
 ?>
- -->
 <form action="" method="POST">
 	<div>
 		<h3>Input #0</h3>
@@ -50,4 +59,4 @@ else {
 	<hr>
 	<button>Check</button>
 </form>
-<!-- <?php } ?> -->
+<?php } ?>
