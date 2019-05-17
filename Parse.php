@@ -11,6 +11,12 @@
 **/
 if(isset($_POST['submit'])) {
 	$input=$_POST['input'];
+	$action=$_POST['action'];
+	$orientation=$_POST['orientation'];
+	$count=$_POST['count'];
+	$keepempty=$_POST['keepempty'];
+	///////////////////////////////////
+	
 }
 else {
 ?>
