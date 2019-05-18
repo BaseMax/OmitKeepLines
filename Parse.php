@@ -4,7 +4,7 @@
 * @Name : OmitKeepLines/Parse.php
 * @Version : 1.0
 * @Programmer : Max
-* @Date : 2019-05-17, 2019-05-18
+* @Date : 2019-05-17
 * @Released under : https://github.com/BaseMax/OmitKeepLines/blob/master/LICENSE
 * @Repository : https://github.com/BaseMax/OmitKeepLines
 *
@@ -53,22 +53,24 @@ if(isset($_POST['submit'])) {
 		}
 		else {
 			if($action == true) { // omit
-				$begin=-1 * $count_number;
-				// $length=$count_number;
-				$line=mb_substr($line, $begin);
-				// $line=mb_substr($line, $begin, $length);
-			}
-			else { // keep
 				$begin=0;
-				$length=-1 * $count_number;
+				$length=mb_substr($input) - $count_number;
+				// $length=$count_number;
+				// $line=mb_substr($line, $begin);
 				$line=mb_substr($line, $begin, $length);
 			}
+			else { // keep
+				$begin=$count_number;
+				// $length=-1 * $count_number;
+				$line=mb_substr($line, $begin);
+			}
 		}
-		$output.=$line;
+		$output.=$line."\n";
 	}
-	print "<pre>";
+	// print "<pre>";
+	header("Content-Type: text/plain");
 	print $output;
-	print "</pre>";
+	// print "</pre>";
 }
 else {
 ?>
